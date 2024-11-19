@@ -22,6 +22,7 @@
           id="email"
           name="email"
           placeholder="Tu Email"
+          maxlength="30"
           required
         />
 
@@ -54,6 +55,7 @@
             id="paper-id-1-field"
             name="paper-id-1-field"
             placeholder="paperID_1"
+            maxlength="20"
             required
           />
 
@@ -67,6 +69,7 @@
             id="paper-id-2-field"
             name="paper-id-2-field"
             placeholder="paperID_2"
+            maxlength="20"
           />
 
           <p>
@@ -89,6 +92,7 @@
             type="file"
             id="constancia-archivo"
             name="constancia-archivo"
+            accept="image/*,.pdf"
           />
           <span id="file-too-big">Archivo demasiado grande</span>
 
@@ -109,6 +113,7 @@
             type="text"
             id="numero-folio-campo"
             name="numero-folio-campo"
+            maxlength="20"
             required
           />
           <span id="folio-invalido">El folio debe ser un número</span>
@@ -123,6 +128,7 @@
             type="file"
             id="ficha-deposito-archivo"
             name="ficha-deposito-archivo"
+            accept="image/*,.pdf"
             required
           />
           <span id="file-too-big">Archivo demasiado grande</span>
@@ -159,11 +165,17 @@
 
           <label for="rfc">RFC:</label>
           <span id="required-marker">* </span>
-          <input type="text" id="rfc" name="rfc" />
+          <input type="text" id="rfc" name="rfc" maxlength="13" />
 
           <label for="rfc-archivo">Adjuntar archivo del RFC</label>
           <span id="required-marker">* </span>
-          <input type="file" id="rfc-archivo" name="rfc-archivo" />
+          <input
+            type="file"
+            id="rfc-archivo"
+            name="rfc-archivo"
+            accept=".pdf"
+            maxlength="20"
+          />
           <span id="file-too-big">Archivo demasiado grande</span>
 
           <p>
@@ -174,31 +186,36 @@
 
           <label for="razon-social">Nombre o Razón social:</label>
           <span id="required-marker">* </span>
-          <input type="text" id="razon-social" name="razon-social" />
+          <input
+            type="text"
+            id="razon-social"
+            name="razon-social"
+            maxlength="20"
+          />
           <br />
 
           <label for="domicilio"
             >Domicilio: Calle, número exterior, interior:</label
           >
           <span id="required-marker">* </span>
-          <input type="text" id="domicilio" name="domicilio" />
+          <input type="text" id="domicilio" name="domicilio" maxlength="100" />
 
           <label for="colonia">Colonia:</label>
           <span id="required-marker">* </span>
-          <input type="text" id="colonia" name="colonia" />
+          <input type="text" id="colonia" name="colonia" maxlength="40" />
 
           <br />
           <label for="cp">Código Postal (Numbers only):</label>
           <span id="required-marker">* </span>
-          <input type="text" id="cp" name="cp" />
+          <input type="text" id="cp" name="cp" maxlength="10" />
 
           <label for="ciudad">Ciudad:</label>
           <span id="required-marker">* </span>
-          <input type="text" id="ciudad" name="ciudad" />
+          <input type="text" id="ciudad" name="ciudad" maxlength="20" />
 
           <label for="estado">Estado:</label>
           <span id="required-marker">* </span>
-          <input type="text" id="estado" name="estado" />
+          <input type="text" id="estado" name="estado" maxlength="20" />
         </div>
 
         <div id="registrar">

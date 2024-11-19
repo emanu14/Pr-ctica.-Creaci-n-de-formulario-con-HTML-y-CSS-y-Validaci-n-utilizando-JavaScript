@@ -1,0 +1,126 @@
+* {
+  font-family: "Calibri", sans-serif;
+}
+
+body {
+  background-color: rgb(236, 236, 236);
+}
+
+h1 {
+  text-align: center;
+
+  font-size: 1.7em;
+
+  color: green;
+}
+
+label {
+  font-size: 0.8em;
+  color: rgb(83, 83, 83);
+}
+
+fieldset {
+  background-color: white;
+  margin-bottom: 1em;
+  border: 0.01em solid;
+}
+
+fieldset > *,
+fieldset > div > * {
+  margin: 0.2em 0;
+}
+
+fieldset > h2 {
+  text-align: center;
+
+  font-size: 1.2em;
+
+  color: orange;
+}
+
+#required-marker {
+  color: red;
+}
+
+#file-too-big,
+#folio-invalido {
+  display: none;
+  font-size: 0.8em;
+
+  color: red;
+}
+
+#email {
+  width: 15em;
+}
+
+.paper-id {
+  margin: 1.5em 0;
+}
+
+#paper-id-2 {
+  display: none;
+}
+
+#constancia {
+  display: none;
+}
+
+#facturacion-set > h2 {
+  text-align: center;
+
+  font-size: 1.2em;
+
+  color: red;
+}
+
+#facturacion,
+#constancia {
+  display: none;
+
+  padding: 0.8em;
+  border: 0.01em solid;
+}
+
+#facturacion #aviso {
+  justify-self: center;
+
+  color: red;
+}
+
+#registrar {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+
+  padding: 2em 0;
+  border: 0.01em solid;
+  margin-top: 2em;
+}
+
+#registrar input {
+  padding: 0.9em 2em;
+  border: rgb(192, 70, 70);
+
+  background-color: rgb(192, 70, 70);
+  color: rgb(235, 235, 235);
+
+  border-radius: 0.1em;
+
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 0.3em 0.4em;
+
+  font-size: 0.8em;
+}
+
+footer #footer-sec-2 {
+  text-align: right;
+  width: 20%;
+}

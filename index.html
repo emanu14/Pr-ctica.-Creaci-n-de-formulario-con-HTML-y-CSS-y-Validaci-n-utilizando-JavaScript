@@ -9,6 +9,14 @@
   <body>
     <header>
       <h1>REGISTRO</h1>
+      <nav>
+        <ul>
+          <li><a href="#Inicio">Inicio</a></li>
+          <li><a href="#Formulario">Formulario</a></li>
+          <li><a href="#Contacto">Contacto</a></li>
+          <li><a href="#Acerca">Acerca de</a></li>
+        </ul>
+      </nav>
     </header>
 
     <form>
@@ -20,11 +28,12 @@
         <input
           type="email"
           id="email"
+          class="requerido"
           name="email"
           placeholder="Tu Email"
           maxlength="30"
-          required
         />
+        <span id="email-invalido">Se debe ingresar un correo válido</span>
 
         <p>
           El correo deberá ser de la persona a la cual se le enviará el registro
@@ -37,7 +46,7 @@
 
         <label for="tipo-inscripcion">Escoge un tipo de inscripción:</label>
         <span id="required-marker">* </span>
-        <select id="tipo-inscripcion" name="tipo-inscripcion" required>
+        <select id="tipo-inscripcion" name="tipo-inscripcion" class="requerido">
           <option value="" disabled selected>- Seleccione:--</option>
           <option value="Estudiante">Estudiante</option>
           <option value="Investigador">Investigador</option>
@@ -53,11 +62,12 @@
           <input
             type="text"
             id="paper-id-1-field"
+            class="requerido"
             name="paper-id-1-field"
             placeholder="paperID_1"
             maxlength="20"
-            required
           />
+          <span class="campo-vacio">Se debe llenar el campo</span>
 
           <p>Escribir solo números, sin etiquetas ni Paper_ID.</p>
         </div>
@@ -91,6 +101,7 @@
           <input
             type="file"
             id="constancia-archivo"
+            class="requerido"
             name="constancia-archivo"
             accept="image/*,.pdf"
           />
@@ -112,9 +123,9 @@
           <input
             type="text"
             id="numero-folio-campo"
+            class="requerido"
             name="numero-folio-campo"
             maxlength="20"
-            required
           />
           <span id="folio-invalido">El folio debe ser un número</span>
 
@@ -127,9 +138,9 @@
           <input
             type="file"
             id="ficha-deposito-archivo"
+            class="requerido"
             name="ficha-deposito-archivo"
             accept="image/*,.pdf"
-            required
           />
           <span id="file-too-big">Archivo demasiado grande</span>
 
@@ -165,13 +176,21 @@
 
           <label for="rfc">RFC:</label>
           <span id="required-marker">* </span>
-          <input type="text" id="rfc" name="rfc" maxlength="13" />
+          <input
+            type="text"
+            id="rfc"
+            class="requerido"
+            name="rfc"
+            maxlength="13"
+          />
+          <span class="campo-vacio">Se debe llenar el campo</span>
 
           <label for="rfc-archivo">Adjuntar archivo del RFC</label>
           <span id="required-marker">* </span>
           <input
             type="file"
             id="rfc-archivo"
+            class="requerido"
             name="rfc-archivo"
             accept=".pdf"
             maxlength="20"
@@ -189,53 +208,61 @@
           <input
             type="text"
             id="razon-social"
+            class="requerido"
             name="razon-social"
             maxlength="20"
           />
+          <span class="campo-vacio">Se debe llenar el campo</span>
+
           <br />
 
           <label for="domicilio"
             >Domicilio: Calle, número exterior, interior:</label
           >
-          <span id="required-marker">* </span>
+          <span id="required-marker" class="requerido">* </span>
           <input type="text" id="domicilio" name="domicilio" maxlength="100" />
+          <span class="campo-vacio">Se debe llenar el campo</span>
 
           <label for="colonia">Colonia:</label>
-          <span id="required-marker">* </span>
+          <span id="required-marker" class="requerido">* </span>
           <input type="text" id="colonia" name="colonia" maxlength="40" />
+          <span class="campo-vacio">Se debe llenar el campo</span>
 
           <br />
           <label for="cp">Código Postal (Numbers only):</label>
-          <span id="required-marker">* </span>
+          <span id="required-marker" class="requerido">* </span>
           <input type="text" id="cp" name="cp" maxlength="10" />
+          <span class="campo-vacio">Se debe llenar el campo</span>
 
           <label for="ciudad">Ciudad:</label>
-          <span id="required-marker">* </span>
+          <span id="required-marker" class="requerido">* </span>
           <input type="text" id="ciudad" name="ciudad" maxlength="20" />
+          <span class="campo-vacio">Se debe llenar el campo</span>
 
           <label for="estado">Estado:</label>
-          <span id="required-marker">* </span>
+          <span id="required-marker" class="requerido">* </span>
           <input type="text" id="estado" name="estado" maxlength="20" />
+          <span class="campo-vacio">Se debe llenar el campo</span>
         </div>
 
         <div id="registrar">
-          <input type="submit" value="REGISTRAR" />
+          <a id="boton-registrar">REGISTRAR</a>
         </div>
       </fieldset>
     </form>
-
-    <script src="script.js" type="text/javascript"></script>
 
     <footer>
       <div id="footer-sec-1">
         <span>Todos los derechos reservados © Registro de Papers, Inc.</span>
         <br />
         <span><a href="#terminos-de-servicio">Términos de servicio</a></span> |
-        <span><a href="politica-privacidad">Política de Privacidad</a></span>
+        <span><a href="#politica-privacidad">Política de Privacidad</a></span>
       </div>
       <div id="footer-sec-2">
         Paseo Lorenzo Gastélum 64 Puerta 527, Oviedo, Cbr 39114
       </div>
     </footer>
+
+    <script type="module" src="scripts/app.js"></script>
   </body>
 </html>

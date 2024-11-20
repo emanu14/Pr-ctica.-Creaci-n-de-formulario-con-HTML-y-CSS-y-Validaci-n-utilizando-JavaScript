@@ -14,11 +14,29 @@ h1 {
   color: green;
 }
 
+nav {
+  border: 0.05em solid;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+}
+
 label {
   font-size: 0.8em;
   color: rgb(83, 83, 83);
 }
 
+nav,
 fieldset {
   background-color: white;
   margin-bottom: 1em;
@@ -43,7 +61,10 @@ fieldset > h2 {
 }
 
 #file-too-big,
-#folio-invalido {
+#folio-invalido,
+#email-invalido,
+#paper-1-invalido,
+.campo-vacio {
   display: none;
   font-size: 0.8em;
 
@@ -77,7 +98,6 @@ fieldset > h2 {
 #facturacion,
 #constancia {
   display: none;
-
   padding: 0.8em;
   border: 0.01em solid;
 }
@@ -98,7 +118,7 @@ fieldset > h2 {
   margin-top: 2em;
 }
 
-#registrar input {
+#boton-registrar {
   padding: 0.9em 2em;
   border: rgb(192, 70, 70);
 
